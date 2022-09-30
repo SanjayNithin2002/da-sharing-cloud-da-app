@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    form {
+      position: fixed;
+      top: 20%;
+      left: 40%;
+      width: 30%;
+      margin-top: -50px;
+      margin-left: -100px;
+      background-color: #ffffff;
+    }
+
+    input {
+      background-color: #f5f5f5 !important;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload</title>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img
+            src="https://www.kindpng.com/picc/m/8-83424_notebook-blue-adobe-illustrator-notebook-png-transparent-png.png"
+            height="30" loading="lazy" />
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="/myfiles">My Files</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/search">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/upload">Upload</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          <img src="https://www.freepngimg.com/thumb/email_marketing/142734-symbol-vector-email-free-photo.png"
+            height="20">
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            {{email}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <form action="/upload-post" method="post" enctype="multipart/form-data">
+    <div class="form-outline mb-4">
+      <label for="title" class="form-label">Title: </label>
+      <input class="form-control" type="text" name="title" id="title">
+    </div>
+    <div class="form-outline mb-4">
+      <label for="file" class="form-label">Upload File: </label>
+      <input class="form-control" type="file" name="file" id="file" accept="application/pdf">
+    </div>
+    <button class="btn btn-primary btn-block mb-4" type="submit">Submit</button>
+  </form>
+</body>
+
+</html>
